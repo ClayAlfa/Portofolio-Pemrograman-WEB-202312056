@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toko Elektronik Cepat</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #jam {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #007bff;
+      }
+      .produk-list button {
+        margin-bottom: 10px;
+      }
+      #slideshow-image {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+      }
+      #slideshow-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border: 4px solid #dee2e6;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body onload="initPage()">
+    <div class="container mt-4">
+      <h1 class="text-center">Toko Elektronik Cepat</h1>
+      <p class="text-center">Waktu Transaksi: <span id="jam"></span></p>
+
+      <div class="row">
+        <div class="col-md-4 produk-list">
+          <h4>Daftar Produk</h4>
+          <div id="daftar-produk"></div>
+        </div>
+
+        <div class="col-md-8">
+          <div id="produk-utama" class="mb-4">
+            <img id="slideshow-image" src="" alt="Produk" />
+            <div class="mt-2">
+              <button
+                onclick="gantiGambar(-1)"
+                class="btn btn-secondary btn-sm"
+              >
+                Previous
+              </button>
+              <button onclick="gantiGambar(1)" class="btn btn-secondary btn-sm">
+                Next
+              </button>
+            </div>
+            <h3 id="nama-produk"></h3>
+            <p id="harga-produk"></p>
+          </div>
+
+          <h4>Form Pemesanan</h4>
+          <form onsubmit="return pesanProduk()">
+            <div class="mb-2">
+              <label>Nama Pemesan:</label>
+              <input type="text" id="nama" class="form-control" />
+              <small class="text-danger" id="error-nama"></small>
+            </div>
+            <div class="mb-2">
+              <label>Jumlah Pesan:</label>
+              <input type="number" id="jumlah" class="form-control" />
+              <small class="text-danger" id="error-jumlah"></small>
+            </div>
+            <div class="mb-2">
+              <label>Kode Promo:</label>
+              <input type="text" id="promo" class="form-control" />
+            </div>
+            <button class="btn btn-success">Pesan Sekarang</button>
+          </form>
+
+          <div class="mt-4">
+            <h4>Ringkasan Pesanan</h4>
+            <div id="output-struk" class="border p-3 bg-light"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let produk = [
+        {
+          nama: "Asus ROG Zephyrus",
+          harga: 45000000,
+          gambar: [
+            "https://i.pinimg.com/736x/db/1f/e2/db1fe2a55af18c48840879f755de0736.jpg",
+            "https://i.pinimg.com/736x/8e/83/67/8e8367ff5ac39eb02fc1b25f9eada1a2.jpg",
+          ],
+        },
+        {
+          nama: "ROG Flow Z13",
+          harga: 20000000,
+          gambar: [
+            "https://i.pinimg.com/736x/fd/c5/4c/fdc54c46d5206f6d50696bdd5a69316d.jpg",
+            "https://i.pinimg.com/736x/17/00/a5/1700a583e6e5b11b0fae50f7fa48f17d.jpg",
+          ],
+        },
+        {
+          nama: "ROG Phone",
+          harga: 6200000,
+          gambar: [
+            "https://i.pinimg.com/736x/8c/e0/07/8ce007c03498890e4f5908aff5667058.jpg",
+            "https://i.pinimg.com/736x/dd/08/0f/dd080febb86805f9bbb685eb5715e60d.jpg",
+          ],
+        },
+      ];
+
+      let indexProdukAktif = 0;
+      let indexGambar = 0;
+
+      function initPage() {
+        tampilkanJam();
+        setInterval(tampilkanJam, 1000);
+        tampilkanProduk();
+        tampilkanDaftarProduk();
+      }
+
+      function tampilkanJam() {
+        const sekarang = new Date();
+        const jam = sekarang.getHours().toString().padStart(2, "0");
+        const menit = sekarang.getMinutes().toString().padStart(2, "0");
+        const detik = sekarang.getSeconds().toString().padStart(2, "0");
+        document.getElementById("jam").innerText = `${jam}:${menit}:${detik}`;
+      }
+
+      function tampilkanProduk() {
+        const p = produk[indexProdukAktif];
+        document.getElementById("slideshow-image").src = p.gambar[indexGambar];
+        document.getElementById("nama-produk").innerText = p.nama;
+        document.getElementById("harga-produk").innerText =
+          "Rp " + p.harga.toLocaleString();
+      }
+
+      function gantiGambar(arah) {
+        indexGambar += arah;
+        const gambarArray = produk[indexProdukAktif].gambar;
+        if (indexGambar >= gambarArray.length) indexGambar = 0;
+        if (indexGambar < 0) indexGambar = gambarArray.length - 1;
+        tampilkanProduk();
+      }
+
+      function tampilkanDaftarProduk() {
+        const daftar = document.getElementById("daftar-produk");
+        daftar.innerHTML = "";
+        produk.forEach((p, i) => {
+          const btn = document.createElement("button");
+          btn.innerText = p.nama;
+          btn.className = "btn btn-outline-primary w-100";
+          btn.onclick = () => {
+            indexProdukAktif = i;
+            indexGambar = 0;
+            tampilkanProduk();
+          };
+          daftar.appendChild(btn);
+        });
+      }
+
+      function pesanProduk() {
+        const nama = document.getElementById("nama").value.trim();
+        const jumlah = parseInt(document.getElementById("jumlah").value);
+        const promo = document
+          .getElementById("promo")
+          .value.trim()
+          .toUpperCase();
+
+        let valid = true;
+        document.getElementById("error-nama").innerText = "";
+        document.getElementById("error-jumlah").innerText = "";
+        if (nama === "") {
+          document.getElementById("error-nama").innerText = "Nama wajib diisi";
+          valid = false;
+        }
+        if (isNaN(jumlah) || jumlah <= 0) {
+          document.getElementById("error-jumlah").innerText =
+            "Jumlah harus lebih dari 0";
+          valid = false;
+        }
+        if (!valid) return false;
+
+        const harga = produk[indexProdukAktif].harga;
+        const subtotal = harga * jumlah;
+        let potongan = 0;
+
+        if (promo === "DISKON10") {
+          potongan = subtotal * 0.1;
+        }
+
+        const totalAkhir = subtotal - potongan;
+
+        const idPesanan = "INV-" + Math.floor(Math.random() * 90000 + 10000);
+
+        const output = `
+        <p><b>Order ID:</b> ${idPesanan}</p>
+        <p><b>Nama Pemesan:</b> ${nama}</p>
+        <p><b>Produk:</b> ${produk[indexProdukAktif].nama}</p>
+        <p><b>Jumlah:</b> ${jumlah}</p>
+        <p><b>Subtotal:</b> Rp ${subtotal.toLocaleString()}</p>
+        <p><b>Potongan:</b> Rp ${potongan.toLocaleString()}</p>
+        <p><b>Total Bayar:</b> <strong>Rp ${totalAkhir.toLocaleString()}</strong></p>
+      `;
+        document.getElementById("output-struk").innerHTML = output;
+        return false;
+      }
+    </script>
+  </body>
+</html>
