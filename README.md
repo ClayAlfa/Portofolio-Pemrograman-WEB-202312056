@@ -1,8 +1,9 @@
 # 🌐 Portfolio Pemrograman Web
+
 **Mata Kuliah: Pemrograman Web**  
 **NIM: 202312056**  
 **Nama: M. Ammar Alfarabi**  
-**Institusi: STITEK Bontang**
+**Kampus: Sekolah Tinggi Teknologi Bontang**
 
 ---
 
@@ -12,14 +13,14 @@ Repository ini berisi kumpulan tugas dan project dari mata kuliah Pemrograman We
 
 ## 🛠️ Teknologi yang Digunakan
 
-| Teknologi | Versi | Penggunaan |
-|-----------|-------|------------|
-| **HTML5** | Latest | Struktur dan markup halaman web |
-| **CSS3** | Latest | Styling, layout, dan responsive design |
-| **JavaScript** | ES6+ | Interaktivitas dan dynamic content |
-| **Bootstrap** | 5.3.3 | Framework CSS untuk responsive design |
-| **PHP** | 7.4+ | Server-side scripting dan backend logic |
-| **MySQL** | 8.0+ | Database management system |
+| Teknologi      | Versi  | Penggunaan                              |
+| -------------- | ------ | --------------------------------------- |
+| **HTML5**      | Latest | Struktur dan markup halaman web         |
+| **CSS3**       | Latest | Styling, layout, dan responsive design  |
+| **JavaScript** | ES6+   | Interaktivitas dan dynamic content      |
+| **Bootstrap**  | 5.3.3  | Framework CSS untuk responsive design   |
+| **PHP**        | 7.4+   | Server-side scripting dan backend logic |
+| **MySQL**      | 8.0+   | Database management system              |
 
 ## 📁 Struktur Project
 
@@ -55,11 +56,13 @@ Portofolio-Pemrograman-WEB-202312056/
 ## 🎯 Detail Modul Pembelajaran
 
 ### 📝 Modul 1: HTML Fundamentals
+
 **File:** `Modul-1/tugas_modul_1.html`
 
 **Deskripsi:** Formulir pendaftaran mahasiswa baru yang mendemonstrasikan penggunaan elemen HTML dasar.
 
 **Fitur:**
+
 - Form validation dengan atribut `required`
 - Input types: text, email, radio, checkbox, select, textarea
 - Fieldset untuk grouping form elements
@@ -67,6 +70,7 @@ Portofolio-Pemrograman-WEB-202312056/
 - External link integration
 
 **Konsep yang Dipelajari:**
+
 - Struktur HTML5 semantic
 - Form elements dan attributes
 - Basic styling dengan inline CSS
@@ -75,17 +79,20 @@ Portofolio-Pemrograman-WEB-202312056/
 ---
 
 ### 🎨 Modul 2: CSS & Responsive Design
+
 **Files:** `Modul-2/tugas_modul2.html`, `Modul-2/tugas_modul2.css`
 
 **Deskripsi:** Implementasi CSS Grid Layout dengan responsive design untuk berbagai ukuran layar.
 
 **Fitur:**
+
 - CSS Grid Layout system
 - Responsive breakpoints (768px, 480px)
 - Custom color scheme dan typography
 - Mobile-first approach
 
 **Konsep yang Dipelajari:**
+
 - CSS Grid vs Flexbox
 - Media queries untuk responsive design
 - CSS custom properties
@@ -94,11 +101,13 @@ Portofolio-Pemrograman-WEB-202312056/
 ---
 
 ### 🚀 Modul 3: Bootstrap Framework
+
 **File:** `Modul-3/Tugas - Modul 3.html`
 
 **Deskripsi:** Company profile "BravoTech" menggunakan Bootstrap framework untuk rapid development.
 
 **Fitur:**
+
 - Responsive navigation dengan hamburger menu
 - Bootstrap grid system
 - Card components untuk product showcase
@@ -106,6 +115,7 @@ Portofolio-Pemrograman-WEB-202312056/
 - Footer dengan social media links
 
 **Konsep yang Dipelajari:**
+
 - Bootstrap component library
 - Utility classes dan spacing
 - Responsive grid system
@@ -114,11 +124,13 @@ Portofolio-Pemrograman-WEB-202312056/
 ---
 
 ### ⚡ Modul 4: JavaScript Programming
+
 **File:** `Modul-4/Tugas.html`
 
 **Deskripsi:** Aplikasi e-commerce "Toko Elektronik Cepat" dengan JavaScript interaktivity.
 
 **Fitur:**
+
 - Real-time clock display
 - Image slideshow dengan navigation
 - Dynamic product catalog
@@ -127,6 +139,7 @@ Portofolio-Pemrograman-WEB-202312056/
 - Receipt generation
 
 **Konsep yang Dipelajari:**
+
 - DOM manipulation
 - Event handling
 - Array dan object manipulation
@@ -136,11 +149,13 @@ Portofolio-Pemrograman-WEB-202312056/
 ---
 
 ### 🔧 Modul 5: PHP Fundamentals
+
 **File:** `Modul-5/tugas.php`
 
 **Deskripsi:** Buku tamu digital STITEK Bontang dengan server-side validation.
 
 **Fitur:**
+
 - Server-side form processing
 - Input validation dan sanitization
 - Error handling dan user feedback
@@ -148,6 +163,7 @@ Portofolio-Pemrograman-WEB-202312056/
 - XSS protection dengan `htmlspecialchars()`
 
 **Konsep yang Dipelajari:**
+
 - PHP syntax dan variables
 - Form handling dengan `$_POST`
 - Input validation techniques
@@ -157,11 +173,13 @@ Portofolio-Pemrograman-WEB-202312056/
 ---
 
 ### 🗄️ Modul 6: PHP & Database Integration
+
 **Directory:** `Modul-6/Crud Toko Online/`
 
 **Deskripsi:** Aplikasi CRUD (Create, Read, Update, Delete) untuk manajemen produk toko online.
 
 **Fitur:**
+
 - Database connection dengan MySQLi
 - Full CRUD operations
 - Data listing dengan table format
@@ -170,6 +188,7 @@ Portofolio-Pemrograman-WEB-202312056/
 - Error handling untuk database operations
 
 **Files:**
+
 - `index.php` - Halaman utama dengan listing produk
 - `tambah.php` - Form tambah produk baru
 - `edit.php` - Form edit produk existing
@@ -177,6 +196,7 @@ Portofolio-Pemrograman-WEB-202312056/
 - `koneksi_toko.php` - Database configuration
 
 **Konsep yang Dipelajari:**
+
 - Database design dan normalization
 - SQL queries (SELECT, INSERT, UPDATE, DELETE)
 - PHP-MySQL integration
@@ -186,6 +206,7 @@ Portofolio-Pemrograman-WEB-202312056/
 ## 🚀 Cara Menjalankan Project
 
 ### Prerequisites
+
 - **Web Server:** Apache/Nginx (XAMPP, WAMP, atau LAMP)
 - **PHP:** Version 7.4 atau lebih tinggi
 - **MySQL:** Version 8.0 atau lebih tinggi
@@ -194,17 +215,20 @@ Portofolio-Pemrograman-WEB-202312056/
 ### Setup Instructions
 
 #### 1. Clone Repository
+
 ```bash
 git clone [repository-url]
 cd Portofolio-Pemrograman-WEB-202312056
 ```
 
 #### 2. Setup Web Server
+
 - Install XAMPP/WAMP/LAMP
 - Start Apache dan MySQL services
 - Copy project folder ke `htdocs` (XAMPP) atau `www` (WAMP)
 
 #### 3. Database Setup (untuk Modul 6)
+
 ```sql
 -- Buat database
 CREATE DATABASE db_toko;
@@ -228,7 +252,9 @@ INSERT INTO produk (nama_produk, harga, stok) VALUES
 ```
 
 #### 4. Konfigurasi Database
+
 Edit file `Modul-6/Crud Toko Online/koneksi_toko.php`:
+
 ```php
 <?php
 $servername = "localhost";
@@ -246,21 +272,21 @@ if ($conn->connect_error) {
 
 ### 🌐 Akses Project
 
-| Modul | URL | Deskripsi |
-|-------|-----|-----------|
-| Modul 1 | `http://localhost/[project-folder]/Modul-1/tugas_modul_1.html` | Form Pendaftaran |
-| Modul 2 | `http://localhost/[project-folder]/Modul-2/tugas_modul2.html` | CSS Grid Layout |
+| Modul   | URL                                                              | Deskripsi                 |
+| ------- | ---------------------------------------------------------------- | ------------------------- |
+| Modul 1 | `http://localhost/[project-folder]/Modul-1/tugas_modul_1.html`   | Form Pendaftaran          |
+| Modul 2 | `http://localhost/[project-folder]/Modul-2/tugas_modul2.html`    | CSS Grid Layout           |
 | Modul 3 | `http://localhost/[project-folder]/Modul-3/Tugas - Modul 3.html` | Bootstrap Company Profile |
-| Modul 4 | `http://localhost/[project-folder]/Modul-4/Tugas.html` | JavaScript E-commerce |
-| Modul 5 | `http://localhost/[project-folder]/Modul-5/tugas.php` | PHP Buku Tamu |
-| Modul 6 | `http://localhost/[project-folder]/Modul-6/Crud Toko Online/` | PHP CRUD Application |
+| Modul 4 | `http://localhost/[project-folder]/Modul-4/Tugas.html`           | JavaScript E-commerce     |
+| Modul 5 | `http://localhost/[project-folder]/Modul-5/tugas.php`            | PHP Buku Tamu             |
+| Modul 6 | `http://localhost/[project-folder]/Modul-6/Crud Toko Online/`    | PHP CRUD Application      |
 
 ## 📱 Responsive Design
 
 Semua project telah dioptimasi untuk berbagai ukuran layar:
 
 - **Desktop:** ≥ 1024px
-- **Tablet:** 768px - 1023px  
+- **Tablet:** 768px - 1023px
 - **Mobile:** ≤ 767px
 
 ## 🔒 Security Features
@@ -282,12 +308,14 @@ Semua project telah dioptimasi untuk berbagai ukuran layar:
 Setelah menyelesaikan semua modul, mahasiswa mampu:
 
 1. **Frontend Development:**
+
    - Membuat struktur HTML semantik
    - Implementasi CSS modern dengan Grid/Flexbox
    - Menggunakan framework CSS (Bootstrap)
    - Programming JavaScript untuk interaktivitas
 
 2. **Backend Development:**
+
    - PHP programming fundamentals
    - Database integration dengan MySQL
    - Server-side validation dan security
@@ -309,9 +337,10 @@ Untuk kontribusi atau perbaikan:
 
 ## 📞 Contact
 
-**M. Ammar Alfarabi**  
+**M. Ammar Alfarabi**
+
 - Email: alfarabibravo8@gmail.com
-- Institution: STITEK Bontang
+- Kampus: Sekolah Tinggi Teknologi Bontang
 - NIM: 202312056
 
 ## 📄 License
