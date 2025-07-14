@@ -342,6 +342,7 @@ Untuk kontribusi atau perbaikan:
 - Email: alfarabibravo8@gmail.com
 - Kampus: Sekolah Tinggi Teknologi Bontang
 - NIM: 202312056
+- Instagram: @blck_sunday
 
 ## 📄 License
 
